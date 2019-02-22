@@ -128,7 +128,7 @@ class q86_i_5(q86_inst):
     def __str__(self):
         reg_str = get_reg_str(self.bytes[1])
         dword_str = struct.unpack("<i", self.bytes[2:6])[0]
-        esil_str = "{}, {:#x}, =".format(reg_str, dword_str)
+        esil_str = "{:#x}, {}, =".format(dword_str, reg_str)
         
         return esil_str
 

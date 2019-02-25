@@ -189,14 +189,14 @@ class q86_i_9(q86_inst):
         return esil_str
 
 
-# ESIL: eip, esp, [4], =, 4, esp, +
+# ESIL: esp, [4], eip, =, 4, esp, +=
 class q86_i_10(q86_inst):
 
     byte_id = 0xF8
     size = 1
 
     def __str__(self):
-        esil_str = "eip, esp, [4], =, 4, esp, +"
+        esil_str = "esp, [4], eip, =, 4, esp, +="
         
         return esil_str
 
